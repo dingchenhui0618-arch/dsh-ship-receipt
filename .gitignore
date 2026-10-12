@@ -1,0 +1,12 @@
+node_modules/
+*.log
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 本地验证产物：临时比对目录与草稿脚本
+_verify/
+*.tmp

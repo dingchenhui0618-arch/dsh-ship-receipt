@@ -1,0 +1,59 @@
+{
+  "name": "dsh-ship-receipt",
+  "version": "0.1.0",
+  "description": "A shareable delivery receipt for DeepSeek Harness: branch and commit, artifact sizes and sha256, the three pre-push checks, and your test/build results — hard-split into verified / local-only / unverified, with unverified sections left blank rather than filled with prose.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepack": "node scripts/build.mjs"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "receipt",
+    "handoff",
+    "evidence",
+    "ship"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingchenhui0618-arch/dsh-ship-receipt.git"
+  },
+  "homepage": "https://github.com/dingchenhui0618-arch/dsh-ship-receipt#readme",
+  "bugs": {
+    "url": "https://github.com/dingchenhui0618-arch/dsh-ship-receipt/issues"
+  },
+  "license": "MIT"
+}
