@@ -1,6 +1,7 @@
 {
   "name": "dsh-ship-receipt",
   "version": "0.1.0",
+  "engines": { "dsh": ">=0.2.1-rc.2 <0.3.0" },
   "description": "A shareable delivery receipt for DeepSeek Harness: branch and commit, artifact sizes and sha256, the three pre-push checks, and your test/build results — hard-split into verified / local-only / unverified, with unverified sections left blank rather than filled with prose.",
   "type": "module",
   "main": "lib/index.js",
