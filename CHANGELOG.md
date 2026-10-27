@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased]
+
+### 文档与工程
+
+- 新增 `SECURITY.md`：写清 `checks` 里的命令由插件真的执行（`exec`，180 秒超时、
+  4000 字符输出截断）、读哪些文件、回执写到 `$DSH_HOME/ship-receipt/runs/`、路由没有
+  自己的 token、以及密钥扫描只是 5 条正则等已知限制。
+- 新增 `.github/workflows/ci.yml`：ubuntu + windows × node 22/24，构建后断言 `lib/`
+  与 `src/` 一致，再跑 `npm test`。
+- README 顶部加 CI 与 license badge，引言后加一句 star 引导。没有加 npm badge——这个包
+  没有发布到 npm。
+
 ## 0.1.0
 
 - `ship_receipt` tool: produces a shareable delivery receipt for a project

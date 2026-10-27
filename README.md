@@ -1,8 +1,16 @@
 # dsh-ship-receipt
 
+[![CI](https://github.com/dingchenhui0618-arch/dsh-ship-receipt/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/dingchenhui0618-arch/dsh-ship-receipt/actions/workflows/ci.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 项目收尾时生成一张**可公开的「交付回执」**：分支与 commit、关键产物的尺寸与 sha256、推送前三步检查的结论、你指定的测试与构建结果——并且把它们硬性分成**已验证 / 仅本地 / 未验证**三区。
 
 A shareable delivery receipt for DeepSeek Harness. It measures what it can, records what it was told, and leaves a blank slot where there is nothing to show.
+
+> 用着还行的话，点个 ⭐ 就够了——插件市场的「搜插件」按 GitHub star 排序，star 是这个插件能被人翻到的唯一杠杆。
+
+安全模型——它会执行你给的命令、读哪些文件、回执写到哪里、哪些限制是设计取舍：
+[SECURITY.md](SECURITY.md)。
 
 ## 它解决什么
 
