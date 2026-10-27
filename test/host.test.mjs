@@ -232,7 +232,7 @@ test('a check is executed, and its exit code decides the wording', async () => {
 
   const fail = await built.tool.execute({
     dir: repo,
-    checks: [{ label: '构建', command: 'node -e process.exit(3)' }],
+    checks: [{ label: '构建', command: 'node -e "process.exit(3)"' }],
   }, {})
   const failed = findZone(fail.receipt, 'check-构建')
   assert.equal(failed.zone, 'verified')
